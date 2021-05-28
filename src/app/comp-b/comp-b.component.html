@@ -1,3 +1,10 @@
 <div class="box">
 <button mat-button (click)="devolverAlCompA()" color="primary">{{txtButton}}</button>
+<mat-form-field appearance="legacy">
+    <mat-label>nuevo boton</mat-label>
+    <input formControlName="valorB" matInput placeholder="ej: habilitado">
+    </mat-form-field>
+    
+    <button mat-button (click)="guardarB()" color="primary">Nuevo</button>
+
 </div>

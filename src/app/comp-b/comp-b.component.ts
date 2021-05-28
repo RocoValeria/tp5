@@ -9,17 +9,22 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class CompBComponent implements OnInit {
   @Input() txtButton: any;
   @Output() btnEvent = new EventEmitter<string>();
-  
-    
+  valorButton ='';
+    valorB :('');
   initBForm(){}
 
   ngOnInit(): void {
   this.txtButton = "estoB";
   }
   
-
+guardarB(){
+ 
+   
+    this.valorButton=this.valorB
+  
+}
  devolverAlCompA(){
-   this.btnEvent.emit("comB");
+   this.btnEvent.emit("");
  }
 }
 

@@ -1,6 +1,6 @@
 
 <form [formGroup]="form" name="form">
-
+   
     <mat-form-field appearance="legacy">
     <mat-label>nombre</mat-label>
     <input formControlName="nombre" matInput placeholder="ej: Pablo">
@@ -10,14 +10,14 @@
         <input formControlName="apellido" matInput placeholder="ej: Ramos">
         </mat-form-field><mat-form-field appearance="legacy">
             <mat-label>puesto</mat-label>
-            <input formControlName="estado" matInput placeholder="ej: habilitado">
+            <input formControlName="puesto" matInput placeholder="ej: habilitado">
             </mat-form-field>
     <mat-form-field appearance="legacy">
         <mat-label>valor</mat-label>
         <input formControlName="valorBtn" matInput placeholder="ej: habilitado">
         </mat-form-field>
       
-     
+    
     </form>   
     <mat-label>Datos: {{this.form.value | json}} 
    
