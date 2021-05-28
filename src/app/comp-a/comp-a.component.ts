@@ -30,7 +30,7 @@ export class CompAComponent implements OnInit {
   }
   guardar (){
     debugger
-   
+   this.form.value;
  
     this.valorButton=this.form.value.valorBtn
   }

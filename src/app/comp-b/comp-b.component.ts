@@ -18,13 +18,12 @@ export class CompBComponent implements OnInit {
   }
   
 guardarB(){
- 
    
     this.valorButton=this.valorB
   
 }
  devolverAlCompA(){
-   this.btnEvent.emit("");
+   this.btnEvent.emit("aca esta ");
  }
 }
 
