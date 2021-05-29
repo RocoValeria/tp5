@@ -7,23 +7,20 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./comp-b.component.css']
 })
 export class CompBComponent implements OnInit {
-  @Input() txtButton: any;
-  @Output() btnEvent = new EventEmitter<string>();
-  valorButton ='';
-    valorB :('');
-  initBForm(){}
-
+  @Input() form: any;
+  
+  @Output() btnEvent = new EventEmitter <string>();
+  
+    constructor(){}  
   ngOnInit(): void {
-  this.txtButton = "estoB";
+   debugger
+    this.form;
   }
   
-guardarB(){
-   
-    this.valorButton=this.valorB
+enviarAlCompA(){
+  this.form.nombre="Juan";
+   this.btnEvent.emit(this.form.nombre);
   
-}
- devolverAlCompA(){
-   this.btnEvent.emit("aca esta ");
  }
 }
 

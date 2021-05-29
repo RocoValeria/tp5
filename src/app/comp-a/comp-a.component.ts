@@ -7,35 +7,32 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./comp-a.component.css']
 })
 export class CompAComponent implements OnInit {
-  form : FormGroup
-  
-  valorButton ='';
+  formA : FormGroup
+  nombreA:any;
+  recibe ='';
+ 
 
   constructor (private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.initForm();
+    this.initFormA();
   }
-  initForm(){
-    this.form = this.fb.group({
+  initFormA(){
+    this.formA = this.fb.group({
       nombre: ['',[Validators.required]],
       apellido:'',
       puesto: '',
-     valorBtn:''
-      //Nombre 
-      //DNI
-      //fechaNacimiento
-
-    });
+    
+          });
   }
   guardar (){
     debugger
-   this.form.value;
- 
-    this.valorButton=this.form.value.valorBtn
+    this.formA.value;
+    this.nombreA= this.formA.value;
+    
   }
   onRecibeCompA(event: any){
     debugger;
-    this.valorButton = event;
+    this.recibe = event;
   }
 }

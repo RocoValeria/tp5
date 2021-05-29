@@ -1,5 +1,5 @@
-
-<form [formGroup]="form" name="form">
+<div class ="box">
+<form [formGroup]="formA" name="formA">
    
     <mat-form-field appearance="legacy">
     <mat-label>nombre</mat-label>
@@ -12,15 +12,12 @@
             <mat-label>puesto</mat-label>
             <input formControlName="puesto" matInput placeholder="ej: habilitado">
             </mat-form-field>
-    <mat-form-field appearance="legacy">
-        <mat-label>valor</mat-label>
-        <input formControlName="valorBtn" matInput placeholder="ej: habilitado">
-        </mat-form-field>
-      
-    
+             
     </form>   
-    <mat-label>Datos: {{this.form.value | json}} 
-   
-    <button mat-button [disabled]="form.invalid" (click)="guardar()">Guardar</button>
-  
-<app-comp-b [txtButton]='valorButton' (btnEvent)="onRecibeCompA($event)"></app-comp-b>
+</div> 
+
+<button [disabled]="formA.invalid" mat-button (click)="guardar()" >Guardar</button>
+<app-comp-b [form]='nombreA' (btnEvent)="onRecibeCompA($event)"></app-comp-b>
+
+<h1>se modifica el nombre a : {{recibe}}</h1>
+{{formA.nombre}}
