@@ -7,20 +7,18 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./comp-b.component.css']
 })
 export class CompBComponent implements OnInit {
-  @Input() form: any;
-  
-  @Output() btnEvent = new EventEmitter <string>();
-  
-    constructor(){}  
+  @Input() vieneDeA: any;
+  @Output() btnEvent = new EventEmitter<string>();
+
+  constructor() { }
+
   ngOnInit(): void {
-   debugger
-    this.form;
+
+    this.vieneDeA ='nada'
   }
-  
-enviarAlCompA(){
-  this.form.nombre="Juan";
-   this.btnEvent.emit(this.form.nombre);
-  
+ devolverAlCompA(){
+   this.btnEvent.emit('viene del comp b');
  }
 }
+
 

@@ -1,6 +1,10 @@
-<div class="box">
- <mat-form-field>
-     <mat-label> <h1> Nombre {{form.nombre}} </h1></mat-label>
-</mat-form-field>
-</div>
-<button mat-button color="primary" (click)="enviarAlCompA()" >Click Para Cambiar Nombre</button>
+<p>
+    <br>
+    Nombre: {{vieneDeA.nombre}} <br>
+    <br>
+    Apellido: {{vieneDeA.apellido}} <br>
+    <br>
+    puesto: {{vieneDeA.puesto}} <br>
+    <br>
+</p>
+<button mat-button (click)="devolverAlCompA()" color="primary">{{vieneDeA}}</button>

@@ -28,7 +28,7 @@ export class CompAComponent implements OnInit {
   guardar (){
     debugger
     this.formA.value;
-    this.nombreA= this.formA.value;
+
     
   }
   onRecibeCompA(event: any){

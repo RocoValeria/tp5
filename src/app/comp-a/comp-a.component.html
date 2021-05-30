@@ -1,4 +1,4 @@
-<div class ="box">
+
 <form [formGroup]="formA" name="formA">
    
     <mat-form-field appearance="legacy">
@@ -14,10 +14,10 @@
             </mat-form-field>
              
     </form>   
-</div> 
+
 
 <button [disabled]="formA.invalid" mat-button (click)="guardar()" >Guardar</button>
-<app-comp-b [form]='nombreA' (btnEvent)="onRecibeCompA($event)"></app-comp-b>
+<app-comp-b [vieneDeA]='nombreA' (btnEvent)="onRecibeCompA($event)"></app-comp-b>
 
 <h1>se modifica el nombre a : {{recibe}}</h1>
-{{formA.nombre}}
+
